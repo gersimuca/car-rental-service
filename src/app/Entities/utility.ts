@@ -1,11 +1,11 @@
 const generateId = () => Math.random().toString(16).slice(2).toString();
-const generateInvoice = (chargePerhour, startTime, endTime): number =>
+const generateInvoice = (chargePerhour: number, startTime: number, endTime: number): number =>
   Math.max(
     Math.floor(((endTime - startTime) / 60 / 60) * chargePerhour),
     chargePerhour
   );
-const toRad = (Value) => (Value * Math.PI) / 180;
-function distanceBetween(lat1, lon1, lat2, lon2) {
+const toRad = (Value: number) => (Value * Math.PI) / 180;
+function distanceBetween(lat1: number, lon1: number, lat2: number, lon2: number) {
   var R = 6371; // km
   var dLat = toRad(lat2 - lat1);
   var dLon = toRad(lon2 - lon1);
