@@ -32,15 +32,23 @@ export class AppComponent {
     this.client.firstName = this.bookingForm.controls['firstName'].value;
     this.client.lastName = this.bookingForm.controls['firstName'].value;
     this.client.email = this.bookingForm.controls['firstName'].value;
-    this.makeRequest();
-    this.toggleForm();
-    this.toggleCars();
+    this.client.carModule = this.car.carType;
+
+    console.log(this.client);
+
+    this.sendClientRequest();
+
 
     this.bookingForm.reset({
       firstName: '',
       lastName: '',
       email: '',
     })
+
+    this.toggleForm();
+    this.toggleCars();
+
+
   }
 
   toggleForm() {
@@ -73,7 +81,7 @@ export class AppComponent {
     console.log(this.car.carType)
   }
 
-  public makeRequest() {
-    this.service.makeRequest(this.car, this.client);
+  sendClientRequest() {
+    this.service.makeRequest(this.client);
   }
 }
