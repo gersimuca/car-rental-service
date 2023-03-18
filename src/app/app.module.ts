@@ -29,6 +29,7 @@ import { HttpClientModule } from '@angular/common/http';
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule,
     MatGridListModule,
     BrowserAnimationsModule,
@@ -43,7 +44,7 @@ import { HttpClientModule } from '@angular/common/http';
     MatDatepickerModule,
     MatNativeDateModule,
     MatExpansionModule,
-    HttpClientModule
+
   ],
   providers: [ClientRequestService],
   bootstrap: [AppComponent]
