@@ -68,13 +68,15 @@
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "proxyConfig": "src/proxy.conf.json"
+          },
           "configurations": {
             "production": {
               "browserTarget": "car-rental:build:production"
             },
             "development": {
-              "browserTarget": "car-rental:build:development",
-              "proxyConfig": "src/proxy.config.json"
+              "browserTarget": "car-rental:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -106,5 +108,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "0300fe37-15ad-4c5d-a356-aaf751abb89b"
   }
 }
