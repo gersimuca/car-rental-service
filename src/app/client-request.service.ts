@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Client } from './client';
 import { Observable, throwError } from 'rxjs';
@@ -9,12 +9,19 @@ import { catchError, retry } from 'rxjs/operators';
 })
 export class ClientRequestService {
 
+  private url = "/api/request";
   constructor(private http: HttpClient) { }
 
-  makeRequest(client: Client) {
+  makeRequest(client: Client) : Observable<Client>{
 
-    return this.http.post("http://localhost:8080/request", client, { responseType: 'text' as 'json' });
-    console.log(client.carModule)
-    console.log("It was successfully")
+    const httpOptions = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json'
+      })
+    };
+
+
+    return this.http.post<Client>(this.url, client, httpOptions);
+
   }
 }

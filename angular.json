@@ -73,7 +73,8 @@
               "browserTarget": "car-rental:build:production"
             },
             "development": {
-              "browserTarget": "car-rental:build:development"
+              "browserTarget": "car-rental:build:development",
+              "proxyConfig": "src/proxy.config.json"
             }
           },
           "defaultConfiguration": "development"
