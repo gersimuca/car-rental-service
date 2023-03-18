@@ -45,8 +45,8 @@ export class AppComponent {
       email: '',
     })
 
-    this.toggleForm();
-    this.toggleCars();
+    //this.toggleForm();
+    //this.toggleCars();
 
 
   }
@@ -82,6 +82,9 @@ export class AppComponent {
   }
 
   sendClientRequest() {
-    this.service.makeRequest(this.client);
+    this.service.makeRequest(this.client).subscribe(client => {
+      console.log(client);
+      this.client = client;
+    });
   }
 }
