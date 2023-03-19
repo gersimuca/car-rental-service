@@ -18,7 +18,7 @@ export class AppComponent {
   displayCars = true;
   carModule!: string;
 
-  client = new Client("", "", "");;
+  client = new Client("", "", "");
 
   toggleForm() {
     this.displayForm = !this.displayForm;

@@ -22,12 +22,22 @@ import { MatExpansionModule } from '@angular/material/expansion';
 import { ClientRequestService } from './client-request.service';
 import { HttpClientModule } from '@angular/common/http';
 import { ClientFormComponent } from './client-form/client-form.component';
+import { HomeComponent } from './home/home.component';
+import { ProductDetailComponent } from './product-detail/product-detail.component';
+import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
+import {MatMenuModule} from "@angular/material/menu";
+import {MatToolbarModule} from "@angular/material/toolbar";
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    ClientFormComponent
+    ClientFormComponent,
+    HomeComponent,
+    ProductDetailComponent,
+    HeaderComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
@@ -46,7 +56,8 @@ import { ClientFormComponent } from './client-form/client-form.component';
     MatDatepickerModule,
     MatNativeDateModule,
     MatExpansionModule,
-
+    MatMenuModule,
+    MatToolbarModule,
   ],
   providers: [ClientRequestService],
   bootstrap: [AppComponent]

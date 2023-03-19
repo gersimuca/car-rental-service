@@ -1,0 +1,50 @@
+<mat-grid-list style="margin-top: 3rem;" cols="3" rowHeight="2:1">
+  <mat-grid-tile>
+    <div>
+      <img
+        src="https://cdn2.rcstatic.com/images/car_images/web/skoda/rapid_lrg.jpg"
+      />
+      <button
+        mat-flat-button
+        color="accent"
+        style="float: left"
+        (click)="smallCarSelected()"
+      >
+        Select Car
+      </button>
+    </div>
+  </mat-grid-tile>
+
+  <mat-grid-tile>
+    <div>
+      <img
+        src="https://cdn2.rcstatic.com/images/car_images/web/kia/rio_lrg.jpg"
+      />
+      <button
+        mat-flat-button
+        color="accent"
+        style="float: left"
+        (click)="largeCarSelected()"
+      >
+        Select Car
+      </button>
+    </div>
+  </mat-grid-tile>
+
+  <mat-grid-tile>
+    <div>
+      <img
+        src="https://cdn2.rcstatic.com/images/car_images/web/citroen/c_elysee_lrg.jpg"
+      />
+      <button
+        mat-flat-button
+        color="accent"
+        style="float: left"
+        (click)="premiumCarSelected()"
+      >
+        Select Car
+      </button>
+    </div>
+  </mat-grid-tile>
+</mat-grid-list>
+
