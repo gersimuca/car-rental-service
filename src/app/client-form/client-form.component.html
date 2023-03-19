@@ -1,0 +1,52 @@
+<div>
+  <p>booking works!</p>
+
+  {{ bookingForm.value | json }}
+  {{ bookingForm.pristine | json }}
+  {{ bookingForm.dirty | json }}
+
+  <form
+    *ngIf="displayForm"
+    class="example-form"
+    [formGroup]="bookingForm"
+    (ngSubmit)="addBooking()"
+  >
+    <mat-form-field class="example-full-width">
+      <input
+        type="text"
+        matInput
+        formControlName="firstName"
+        placeholder="First Name"
+      />
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+      <input
+        type="text"
+        matInput
+        formControlName="lastName"
+        placeholder="Last Name"
+      />
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+      <input
+        type="text"
+        matInput
+        formControlName="email"
+        placeholder="Provide Email"
+      />
+    </mat-form-field>
+
+
+      <button
+        mat-raised-button
+        color="primary"
+        class="example-full-width"
+        type="submit"
+      >
+        Book Car
+      </button>
+
+  </form>
+</div>

@@ -21,11 +21,13 @@ import { MatNativeDateModule } from '@angular/material/core';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { ClientRequestService } from './client-request.service';
 import { HttpClientModule } from '@angular/common/http';
+import { ClientFormComponent } from './client-form/client-form.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ClientFormComponent
   ],
   imports: [
     BrowserModule,

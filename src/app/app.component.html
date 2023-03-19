@@ -29,7 +29,7 @@
         mat-flat-button
         color="accent"
         style="float: left"
-        (click)="small()"
+        (click)="smallCarSelected()"
       >
         Select Car
       </button>
@@ -45,7 +45,7 @@
         mat-flat-button
         color="accent"
         style="float: left"
-        (click)="large()"
+        (click)="largeCarSelected()"
       >
         Select Car
       </button>
@@ -61,7 +61,7 @@
         mat-flat-button
         color="accent"
         style="float: left"
-        (click)="premium()"
+        (click)="premiumCarSelected()"
       >
         Select Car
       </button>
@@ -69,57 +69,7 @@
   </mat-grid-tile>
 </mat-grid-list>
 
-<div>
-  <p>booking works!</p>
+<client-form [carModule]="carModule"></client-form>
 
-  {{ bookingForm.value | json }}
-  {{ bookingForm.pristine | json }}
-  {{ bookingForm.dirty | json }}
-
-  <form
-    *ngIf="displayForm"
-    class="example-form"
-    [formGroup]="bookingForm"
-    (ngSubmit)="addBooking()"
-  >
-    <mat-form-field class="example-full-width">
-      <input
-        type="text"
-        matInput
-        formControlName="firstName"
-        placeholder="First Name"
-      />
-    </mat-form-field>
-
-    <mat-form-field class="example-full-width">
-      <input
-        type="text"
-        matInput
-        formControlName="lastName"
-        placeholder="Last Name"
-      />
-    </mat-form-field>
-
-    <mat-form-field class="example-full-width">
-      <input
-        type="text"
-        matInput
-        formControlName="email"
-        placeholder="Provide Email"
-      />
-    </mat-form-field>
-
-    <div>
-      <button
-        mat-raised-button
-        color="primary"
-        class="example-full-width"
-        type="submit"
-      >
-        Book Car
-      </button>
-    </div>
-  </form>
-</div>
 
 <router-outlet></router-outlet>
