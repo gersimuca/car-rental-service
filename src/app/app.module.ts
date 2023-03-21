@@ -26,9 +26,9 @@ import { HomeComponent } from './home/home.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
-import {MatMenuModule} from "@angular/material/menu";
-import {MatToolbarModule} from "@angular/material/toolbar";
-
+import { MatMenuModule } from "@angular/material/menu";
+import { MatToolbarModule } from "@angular/material/toolbar";
+import { MatTabsModule } from '@angular/material/tabs';
 
 @NgModule({
   declarations: [
@@ -58,6 +58,7 @@ import {MatToolbarModule} from "@angular/material/toolbar";
     MatExpansionModule,
     MatMenuModule,
     MatToolbarModule,
+    MatTabsModule,
   ],
   providers: [ClientRequestService],
   bootstrap: [AppComponent]
